@@ -21,15 +21,6 @@ import androidx.compose.ui.res.stringResource
 import dev.ricknout.composesensors.demo.R
 import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.ui.accelerometer.AccelerometerDemo
-import dev.ricknout.composesensors.demo.ui.ambienttemperature.AmbientTemperatureDemo
-import dev.ricknout.composesensors.demo.ui.gravity.GravityDemo
-import dev.ricknout.composesensors.demo.ui.gyroscope.GyroscopeDemo
-import dev.ricknout.composesensors.demo.ui.light.LightDemo
-import dev.ricknout.composesensors.demo.ui.linearacceleration.LinearAccelerationDemo
-import dev.ricknout.composesensors.demo.ui.magneticfield.MagneticFieldDemo
-import dev.ricknout.composesensors.demo.ui.pressure.PressureDemo
-import dev.ricknout.composesensors.demo.ui.proximity.ProximityDemo
-import dev.ricknout.composesensors.demo.ui.relativehumidity.RelativeHumidityDemo
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -72,15 +63,6 @@ fun DemoNavigation(
         when (it) {
             Demo.NONE -> DemoApp(onItemClick = onItemClick)
             Demo.ACCELEROMETER -> AccelerometerDemo()
-            Demo.AMBIENT_TEMPERATURE -> AmbientTemperatureDemo()
-            Demo.GRAVITY -> GravityDemo()
-            Demo.GYROSCOPE -> GyroscopeDemo()
-            Demo.LIGHT -> LightDemo()
-            Demo.LINEAR_ACCELERATION -> LinearAccelerationDemo()
-            Demo.MAGNETIC_FIELD -> MagneticFieldDemo()
-            Demo.PRESSURE -> PressureDemo()
-            Demo.PROXIMITY -> ProximityDemo()
-            Demo.RELATIVE_HUMIDITY -> RelativeHumidityDemo()
         }
     }
 }

@@ -18,7 +18,7 @@ import dev.ricknout.composesensors.demo.model.Demo
 @OptIn(ExperimentalMaterial3Api::class)
 fun Demo(
     demo: Demo,
-    value: String,
+    //value: String,
     content: @Composable BoxWithConstraintsScope.() -> Unit,
 ) {
     Scaffold(topBar = { CenterAlignedTopAppBar(title = { Text(text = demo.title) }) }) { paddingValues ->
@@ -27,12 +27,12 @@ fun Demo(
                 .fillMaxSize()
                 .padding(paddingValues = paddingValues),
         ) {
-            Text(
+            /*Text(
                 modifier = Modifier
                     .padding(16.dp)
                     .align(Alignment.BottomStart),
                 text = value,
-            )
+            )*/
             content()
         }
     }
@@ -42,7 +42,7 @@ fun Demo(
 fun NotAvailableDemo(demo: Demo) {
     Demo(
         demo = demo,
-        value = "Not available",
+        //value = "Not available",
         content = {},
     )
 }
